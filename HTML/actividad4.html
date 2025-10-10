@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Horario</title>
+</head>
+<style>
+    table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+<body>
+    <h1>Horario de clases</h1><br><br>
+    <table>
+        <colgroup>
+            <col span="1" style="background-color:rgb(104, 135, 236)">
+            <col span="5" style="background-color:rgb(179, 202, 252)">
+        </colgroup>
+        <caption><b>Horario DAW</b></caption>
+        <tr>
+            <th>Tramo</th>
+            <th>Lunes</th>
+            <th>Martes</th> 
+            <th>Miércoles</th>
+            <th>Jueves</th>
+            <th>Viernes</th>
+        </tr>
+        <tbody>
+            <tr> 
+                <td>8:15</td>
+                <td rowspan="2">ADA</td>
+                <td rowspan="2">SIMR</td>
+                <td rowspan="3">PLE</td>
+                <td rowspan="3">PLE</td>
+                <td rowspan="2">ADA</td>
+            </tr>
+            <tr>
+                <td>9:15</td>
+            </tr>
+            <tr>
+                <td>10:15</td>
+                <td>PLE</td>
+                <td>ADA</td>
+                <td>PLE</td>
+            </tr>
+            <tr>
+                <td>11:15</td>
+                <td colspan="5">RECREO</td>
+            </tr>
+            <tr>
+                <td>11:45</td>
+                <td rowspan="3">SIMR</td>
+                <td>ADA</td>
+                <td rowspan="2">ADA</td>
+                <td rowspan="3">ADA</td>
+                <td>PLE</td>
+            </tr>
+            <tr>
+                <td>12:45</td>
+                <td rowspan="2">PLE</td>
+                <td rowspan="2">SIMR</td>
+            </tr>
+            <tr>
+                <td>13:45</td>
+                <td>IUA</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="6">¡Fin de la jornada!</th>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

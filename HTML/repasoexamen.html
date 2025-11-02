@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--Hay que tener clara la estructura de meta, css y favicon-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alba Montoro Ruiz">
+    <meta description="Página de repaso para el examen de HTML">
+    <title>Repaso</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+    <header>
+        <!--El header es donde suele ir la barra de navegacion y el call to action con alguna imagen-->
+        <div id="index">
+            <nav>
+                <ul>
+                    <a href="#home>"><li>Home</li></a>
+                    <a href="#about>"><li>About</li></a>
+                    <a href="#services"><li>Services</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div>
+            <button>Call to action</button>
+        </div>
+    </header>
+    <!--Ahora vamos con el groso de la página donde irán los párrafos, vídeos, formularios, etc-->
+    <main>
+        <h1>Esta es una prueba de mis conocimientos</h1>
+        <p>Hola mundo!</p>
+        <section id="home">
+            <h2>Listado de cosas que me gustan:</h2>
+            <ul>
+                <li>Programar</li>
+                <li>Aprender</li>
+                <li>Viajar</li>
+            </ul>
+        </section>
+        <section id="about">
+            <!--Formulario-->
+            <form>
+                <!--Cada vez que hay un nuevo campo de información se hace un nuevo fielset-->
+                <fieldset>
+                    <legend>Gustos personales</legend>
+                    <!--En las label se pone lo que se quiere saber y el identificador donde después el usuario marcará su opción-->
+                    <label for="comida">Comida favorita:</label>
+                    <!--De tipo texto-->
+                    <input type="text" name="comida" id="comida"><br>
+                    <label for = "nacimiento">Fecha de nacimiento:</label>
+                    <!--De tipo fecha-->
+                    <input type="date" name="nacimiento" id="nacimiento">
+                </fieldset>
+                <fieldset>
+                    <legend>Otros datos</legend>
+                    <p>Estado civil:</p>
+                    <label for = "soltero">Soltero</label>
+                    <!--De tipo radio, circulítos-->
+                    <input type ="radio" name="estado_civil" id="soltero" value="soltero">
+                    <label for = "casado">Casado</label>    
+                    <input type ="radio" name="estado_civil" id="casado" value="casado"><br>
+                    <label for="Dirección">Dirección:</label>
+                    <!--El text area es un cuadro de texto donde el usuario puede escribir más-->
+                    <textarea name="direccion" rows="2" cols="30"></textarea>
+                </fieldset>
+            </form>
+        </section>
+        <section id="services">
+            <!--Al meter la imagen dentro de una estructura de enlace hacemos que la imagen sea el propio vinculo-->
+            <a href="#index"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEc9A_S6BPxCDRp5WjMFEfXrpCu1ya2OO-Lw&s" alt="Imagen de HTML" style="width:200px;height:200px;"></a>
+            <h2>Haz click en la imagen para volver al inicio</h2>
+
+            <!--Metemos un vídeo-->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/EvKm8yhM7V8?si=giUf7z2qBHsFtBsX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <h2>Video explicativo sobre HTML</h2>
+        </section>
+        <section id="FAQS">
+            <!--Cómo hacer una seccion de FAQS en la web-->
+            <h2>Preguntas frecuentes</h2>
+            <!--El details es un desplegable y el summary es el nombre del desplegable, en este caso, la pregunta-->
+            <details>
+                <summary>¿Qué son las FAQS?</summary>
+                <p>Las FAQS son las preguntas más frecuentes que suelen tener los usuarios sobre un tema en concreto.</p>
+            </details>
+            <details>
+                <summary>¿Por qué son importantes?</summary>
+                <p>Porque ayudan a resolver dudas comunes y mejoran la experiencia del usuario.</p>
+            </details>
+            <details>
+                <summary>¿Cómo se crean?</summary>
+                <p>Se crean identificando las preguntas más comunes y proporcionando respuestas claras y concisas.</p>
+            </details>
+            <details>
+                <summary>¿Dónde se suelen colocar?</summary>
+                <p>Normalmente se colocan en la sección de ayuda o soporte de un sitio web.</p>
+            </details>
+        </section>
+    </main>
+</body>
+<footer>
+    <!--El footer es la parte final de una web-->
+    <div>
+        <p>Instagram</p>
+        <p>Facebook</p>
+        <p>Twitter</p>
+    </div>
+    <div>
+        <p>Acerca de</p>
+        <p>Equipo</p>
+        <p>Carreras</p>
+    </div>
+    <div>
+        <p>Ayuda</p>
+        <p>Soporte técnico</p>
+        <p>Preguntas</p>
+    </div>
+    <div>
+        <p>Contacto</p>
+        <p>Soporte</p>
+        <a href="#FAQS"><p>FAQs</p></a>
+    </div>
+</footer>
+</html>

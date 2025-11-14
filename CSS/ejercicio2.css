@@ -1,15 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 nav {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     background-color: beige;
+    padding: 10px;
+    align-items: center;
+}
+
+nav h1 {
+    padding-left: 15px;
+    color:darkcyan
 }
 
 .nav-list {
     display: flex;
-    gap: 15px;
+    gap: 20px;
     list-style-type: none;
     /*para que el punto no esté*/
     flex-direction: row;
+    padding-right: 15px;
 }
 
 .nav-list a {

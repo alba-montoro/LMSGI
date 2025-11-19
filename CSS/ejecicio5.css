@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#offer-title {
+    padding: 10px 0 30px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+    color: darkmagenta;
+}
+
+.card-list{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.card-list .card{
+    
+}
+

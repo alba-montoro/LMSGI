@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ /*MENU*/
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(165, 34, 89, 0.753);
+    padding: 10px;
+    align-items: center;
+}
+
+nav h1 {
+    padding-left: 15px;
+    color:rgb(255, 255, 255);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.nav-list {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    /*para que el punto no esté*/
+    flex-direction: row;
+    padding-right: 15px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: large;
+    font-weight: bold;
+}
+
+.nav-list a:hover {
+    color: rgb(241, 243, 134);
+}
+
+/*HERO*/
+.cta-container {
+   background-image: url("../CSS/ej3_images/hero.jpg"); 
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-attachment: scroll;
+   height: 90vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.cta-text {
+    font-size: 28px;
+    font-weight: bold;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgba(255, 255, 255, 0.801);
+}
+
+.cta-button {
+    background-color: rgba(165, 34, 89, 0.582);
+    color: rgb(255, 255, 255);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    padding: 15px 30px;
+    font-size: 20px;
+    border-radius: 20px;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+/*GALERÍA*/
+#gallery-section .section-title{
+    text-align: center;
+    font-size: 2rem;
+    padding: 10px 0 30px; 
+    font-family: 'Courier New', Courier, monospace;
+    color: rgba(165, 34, 89, 0.986);
+}
+
+#gallery-section .gallery-list{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    /*hay un gap por cada imagen*/
+    gap: 32px;
+}
+
+#gallery-section .gallery-list .gallery-item{
+    /*para que se queden tres columnas siempre*/
+    width: calc(33% - 32px);
+
+}
+
+#gallery-section .gallery-list .gallery-item .gallery-image{
+    /*para que las imagenes se adapten al tamaño del contenedor*/
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}

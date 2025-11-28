@@ -188,8 +188,13 @@ footer .footer-enterprise {
 
 footer .footer-privacy {
     display: flex;
-    gap: 20px;
+    flex-direction: row;
+    gap: 20px
+}
+
+footer .footer-privacy a {
     font-family: 'Courier New', Courier, monospace;
     font-size: small;
     color: white;
+    text-decoration: none;
 }

@@ -1,0 +1,26 @@
+.sour-gummy {
+  font-family: "Sour Gummy", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100px;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100px;
+}
+
+p {
+    font-family: "Sour Gummy", sans-serif;
+}
+
+
+.sour-gummy {
+  font-family: "Sour Gummy", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200px;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 200px;
+}
+
+h1 {
+    font-family: "Sour Gummy", sans-serif;
+}

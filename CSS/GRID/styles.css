@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.grid-container {
+    display: grid;
+    /*si el hueco que queda mide menos de 300px, se adapta todo a 1fr para que quepa y no queden huecos*/
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: 100px 100px 100px 100px;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: solid 1px rgba(76, 6, 94, 0.884);
+    background-color: rgb(234, 218, 241);
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.grid-item:hover {
+    transform: scale(1.03);
+}
+
+/*la columna que tenga la clase wide pasará a ocupar 2 columnas*/
+.wide {
+    grid-column: span 2;
+}
+
+/*la fila que tenga tall ocupará dos filas*/
+.tall {
+    grid-row: span 2;
+}

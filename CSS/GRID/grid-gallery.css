@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    /*cuando establece la dimension de una capa, que el borde esté incluido*/
+    box-sizing: border-box;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-auto-rows: minmax(200px, auto);
+    gap: 20px;
+    grid-auto-flow: dense;
+}
+
+.grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.3s;
+}
+
+.grid-item:hover {
+    transform: scale(1.02);
+}
+
+/*si la pantalla es mayor de 600px, se aplicará wide y tall, sino se verán todas iguales*/
+@media (min-width: 600px) {
+    .wide {
+    grid-column: span 2;
+}
+
+    .tall {
+    grid-row: span 2;
+}
+}
+

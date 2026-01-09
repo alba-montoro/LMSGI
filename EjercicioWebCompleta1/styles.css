@@ -1,0 +1,48 @@
+:root {
+    --textcolor: #343a40;
+    --tipography: Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #f8f9fa;
+    margin: 2%;
+    
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+li {
+  padding: 10px; 
+  font-size: 1.2em;  
+  font-family: var(--tipography); 
+}
+
+.logo {
+    width: 1.6em;
+}
+
+a {
+    text-decoration: none;
+    color: var(--textcolor);
+}
+
+a:hover {
+    font-weight: bold;
+}

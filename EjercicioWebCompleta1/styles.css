@@ -12,7 +12,10 @@
 header {
     background-color: #f8f9fa;
     margin: 2%;
-    
+    padding-bottom: 25px;
+    padding-top: 25px;
+    padding-left: 10px;
+    padding-right: 25px;
 }
 
 nav {
@@ -35,14 +38,180 @@ li {
 }
 
 .logo {
-    width: 1.6em;
+    font-size: 1.6em;
 }
 
-a {
+header a {
     text-decoration: none;
     color: var(--textcolor);
 }
 
-a:hover {
+header ul a:hover {
+    font-weight: bold;
+    border-bottom: 3px solid #007bff;
+}
+
+.Home {
+    padding-bottom: 10px;
+    border-bottom: 3px solid #007bff;
+}
+
+.About {
+    padding-bottom: 10px;
+    border-bottom: 3px solid #32cd32;
+}
+
+.Services {
+    padding-bottom: 10px;
+    border-bottom: 3px solid #8a2be2;
+}
+
+.Contact {
+    padding-bottom: 10px;
+    border-bottom: 3px solid #ffd747;
+}
+
+.cta-container {
+    background-color: #e9ecef;
+    padding-top: 110px;
+    padding-bottom: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 2.2em;
+    font-family: var(--tipography)
+}
+
+.cta-container p {
+    max-width: 550px;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-align: center;
+    font-family: var(--tipography)
+}
+
+.services-container {
+    background-color: #f1f3f5;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.services-container div {
+    padding-top: 34px;
+    padding-bottom: 34px;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--tipography);
+    color: var(--textcolor);
+}
+
+.services-container div p {
+    margin-top: 5%;
+    text-align: center;
+    font-family: var(--tipography);
+    color: var(--textcolor);
+}
+
+.icon {
+    /*Los hipervínculos de los iconos los interpreta como texto*/
+    font-size: 2em;
+}
+
+.contact-container {
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.contact-container h2 {
+    font-family: var(--tipography);
+    color: var(--textcolor);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    padding: 20px;
+    width: 400px;
+}
+
+.contact-form label {
+    font-family: var(--tipography);
+    color: var(--textcolor);
     font-weight: bold;
 }
+
+.contact-form input,
+.contact-form textarea {
+    background-color: #f1f3f5;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    margin-bottom: 10px;
+}
+
+.contact-form input:hover,
+.contact-form textarea:hover {
+    border-bottom: 3px solid #007bff;
+}
+
+.nombre {
+    border-bottom:3px solid #32cd32;
+}
+
+.correo {
+    border-bottom:3px solid #8a2be2;
+}
+
+.textarea {
+    border-bottom:3px solid #ffd747;
+}
+
+.contact-form button {
+    background-color: #007bff;
+    color: white;
+    font-family: var(--tipography);
+    border: 0;
+    padding: 5px;
+}
+
+.contact-form button:hover {
+    background-color: #343a40;
+}
+
+
+footer {
+    background-color: #f1f3f5;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer h3,
+footer small {
+    font-weight: bold;
+    font-family: var(--tipography);
+    color: var(--textcolor);
+}
+
+footer a {
+    text-decoration: none;
+    font-size: 2em;
+}
+
+

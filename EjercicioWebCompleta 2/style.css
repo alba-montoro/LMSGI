@@ -3,7 +3,7 @@
     --dark-blue: #143548;
     --background-light: #ffebd9;
     --hover-light: #CCB299;
-    --font-family: .montserrat-light, sans-serif;
+    --font-family: Montserrat, sans-serif;
 }
 
 .montserrat-light{
@@ -12,9 +12,6 @@
   font-weight: 300;
   font-style: normal;
 }
-
-
-
 
 * {
     margin: 0;
@@ -45,5 +42,21 @@ header {
 .menu li a {
     text-decoration: none;
     color: var(--background-light);
-    font-family: --;
+}
+
+.search input,
+.search button {
+    background-color: var(--background-light);
+    padding: 5px;
+}
+
+.cta-container {
+    background-image: url(gato\ fondo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de tareas</title>
+    <style>
+        button {
+            background-color: rgba(10, 155, 155, 0.795);
+            cursor: pointer;
+            transition: transform 1s ease;
+        }
+
+        button:hover {
+            background-color: rgba(6, 90, 90, 0.877);
+            color: white;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    
+    <button id="agregar">Agregar tarea</button>
+    <input type="text" id="entrada">
+    <!--<button id="borrar">Borrar tarea</button>-->
+    <br>
+    <div id="tareas">
+        <ul id="listatareas">
+         
+        </ul>
+    </div>
+    <br>
+
+    <button id="cambiarcolor">Cambiar color</button>
+    <!--<div id="imagen"></div>-->
+
+    <script src="script.js"></script>
+
+</body>    
+</html>

@@ -8,13 +8,19 @@ function agregar() {
     let tarea = document.createElement('li')
     tarea.textContent = input.value + ' '
     
-    let button = document.createElement('button')
+    let buttonBorrar = document.createElement('button')
     // Le ponemos un texto al boton
-    button.textContent = 'x'
-    button.addEventListener('click', borrar)
+    buttonBorrar.textContent = 'x'
+    buttonBorrar.addEventListener('click', borrar)
 
-    tarea.appendChild(button)
+    // Creamos un input de tipo checkbox
+    let hecho = document.createElement('input')
+    hecho.type = 'checkbox'
+
+    tarea.appendChild(hecho)
+    tarea.appendChild(buttonBorrar)
     lista.appendChild(tarea)
+
 }
 
 function borrar() {

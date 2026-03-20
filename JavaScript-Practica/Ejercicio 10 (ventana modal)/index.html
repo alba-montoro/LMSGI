@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        dialog {
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ventana modal</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil blanditiis aut vero omnis pariatur iste ipsam tenetur perferendis, voluptatum laborum, rerum id ea labore aspernatur magnam non? Expedita, cupiditate nam.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam quisquam dolorem illum labore deserunt dolore? Dignissimos, aut porro ex doloribus optio quam, esse minus labore distinctio repellat non! Consequuntur, labore.</p>
+
+    <button onclick="abrirmodal()">Abrir modal</button>
+
+    <dialog id="modal">
+        <h2>Modal</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam soluta minus, aperiam natus at iure id. Nihil distinctio nemo libero porro facere dolor, esse, deserunt minima maxime alias corrupti error?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima cupiditate doloribus quibusdam, voluptatibus aliquid consequatur expedita soluta rerum voluptas consectetur temporibus vel? Corporis fuga nisi rerum ea ab error natus.</p>
+        <button onclick="cerrarmodal()">Cerrar modal</button>
+    </dialog>
+
+    <!-- JavaScript -->
+    <script>
+        function abrirmodal() {
+            const modal = document.querySelector('#modal')
+            modal.showModal()
+        }
+
+        function cerrarmodal() {
+            const modal = document.querySelector('#modal')
+            modal.close()
+        }
+    </script>
+</body>
+</html>

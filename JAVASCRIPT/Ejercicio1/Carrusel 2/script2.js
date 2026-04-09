@@ -19,3 +19,4 @@ function mostrarCarrusel () {
 
     setTimeout(mostrarCarrusel, 2000);
 }
+ 

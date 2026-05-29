@@ -1,59 +1,45 @@
-// let, var , const (variable que no se puede modificar)
-// se pone parseInt para que no lo interprete como una cadena de caracteres, sino como un número
+const botonCargar = document.getElementById('btn-cargar');  
+const contenedor = document.getElementById('contenedor-personajes');
 
-       /* let edad = parseInt(prompt("Introduce la edad"));
-        if (edad >= 18) {
-            console.log("Eres mayor de edad porque tienes", edad, "años")
-        } else {
-            console.log("Eres menor de edad porque tienes", edad, "años")
-        }*/
-       
-        // Así se declaran funciones
-        /*function mostrarNombre() {
-            // Crear variables
-            const entrada = document.getElementById("nombre");
-            const salida = document.getElementById("respuesta");
-            salida.textContent = entrada.value;
-        }*/
+// Creamos el evento para que recoga el click del botón
+botonCargar.addEventListener('click', obtenerDatos);
 
-        /*function imc() {
-            const peso=document.getElementById("peso");
-            const altura=document.getElementById("altura");
-            const respuesta = document.getElementById("respuesta");
-            let pesoPersona = peso.value;
-            let alturaPersona = altura.value;
-            let calcularIMC = pesoPersona/(alturaPersona*alturaPersona);
-            respuesta.textContent=calcularIMC
+async function obtenerDatos() {
+    try {
+        /*Realizamos la petición a la API, yo he usado la de Rick and Morty
+        porque es gratuita y no requiere autenticación*/
+        const respuesta = await fetch('https://rickandmortyapi.com/api/character');
 
-            if (calcularIMC < 18.5) {
-                solucion.textContent="Tienes bajo peso";
-            } else if (calcularIMC >= 18.5 && calcularIMC < 24.9) {
-                solucion.textContent="Tienes peso normal";
-            } else if (calcularIMC >= 25 && calcularIMC < 29.9) {
-                solucion.textContent="Tienes sobrepeso";
-            } else {
-                solucion.textContent="Tienes obesidad";
-            }
-            
-        }*/
+        // Convertimos la respuesta a JSON
+        const datos = await respuesta.json();
 
-        /*function cambiarColor() {
-            const cuadrado = document.getElementById("cuadrado");
-            cuadrado.style.backgroundColor = "blue";
-            cuadrado.style.width = "300px";
-            cuadrado.style.height = "300px";
-            document.body.style.backgroundColor = "yellow";
+        // La API guarda los personajes en una propiedad llamada "results"
+        pintarEnHTML(datos.results);
 
-            // Para ocultar un elemento, se usa display none
-            cuadrado.style.display= "none";
-        }*/
+    } catch (error) {
+    console.error('Error al obtener los datos:', error);
+    contenedor.innerHTML = "<p>Error al cargar los datos. <p>";
+    }
 
-        // Captura de eventos
-        const boton = document.getElementById('boton');
-        boton.addEventListener('click', modoNoche);
+}
 
-        function modoNoche() {
-            document.body.style.backgroundColor = "black";
-            document.body.style.color = "white";
-        }
-    
+// Función para pintar los personajes en el HTML
+function pintarEnHTML(personajes) {
+    contenedor.innerJTML = ''; // Primero limpiamos
+    personajes.forEach(personaje => {
+        // Creamos un div para cada personaje
+        const tarjeta = document.createElement('div');
+        tarjeta.className = 'tarjeta';
+
+        // Metemos contenido a la tarjeta
+        tarjeta.innerHTML = `
+            <img src="${personaje.image}" alt='${personaje.name}'>
+            <h3>${personaje.name}</h3>
+            <p>Estado: ${personaje.status}</p>
+        `;
+
+        // Lo añadimos al contenedor principal
+        contenedor.appendChild(tarjeta);
+    });
+}
+
